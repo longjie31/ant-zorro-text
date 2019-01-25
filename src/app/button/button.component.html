@@ -1,0 +1,66 @@
+<div>
+  <h2>默认按钮</h2>
+  <button nz-button nzType="primary">主按钮</button>
+  <button nz-button nzType="default">次按钮</button>
+  <button nz-button nzType="dashed">虚线按钮</button>
+  <button nz-button nzType="danger">危险按钮</button>
+</div>
+<div>
+  <h2>图标按钮</h2>
+  <button nz-button nzType="primary" nzShape="circle"><i nz-icon type="search"></i></button>
+  <button nz-button nzType="primary"><i nz-icon type="search"></i>主搜索</button>
+  <button nz-button nzType="default" nzShape="circle"><i nz-icon type="search"></i></button>
+  <button nz-button nzType="default">次搜索</button>
+  <hr>
+  <button nz-button nzType="dashed" nzShape="circle"><i nz-icon type="search"></i></button>
+  <button nz-button nzType="dashed"><i nz-icon type="search"></i>虚线搜索</button>
+  <button nz-button nzType="danger" nzShape="circle"><i nz-icon type="search"></i></button>
+  <button nz-button nzType="danger">危险搜索</button>
+</div>
+<div>
+  <h2>按钮尺寸</h2>
+  <p>按钮有大、中、小三种，默认为中，设置nzSize为large，small设置为大，小尺寸</p>
+  <nz-radio-group [(ngModel)]="size">
+    <label nz-radio-button nzValue="large">大</label>
+    <label nz-radio-button nzValue="default">默认</label>
+    <label nz-radio-button nzValue="small">小</label>
+  </nz-radio-group>
+    <hr>
+    <button nz-button nzType="primary" [nzSize]="size"><i nz-icon type="download"></i>Download</button>
+</div>
+<div>
+  <h2>不可用状态</h2>
+  <p>添加disabled属性让按钮处于不可用状态</p>
+  <button nz-button nzType="primary">主按钮</button>
+  <button nz-button nzType="primary" disabled>主按钮（禁用）</button>
+</div>
+<div>
+  <h2>加载中状态</h2>
+  <p>添加nzLoading属性可让按钮处于加载状态</p>
+  <button nz-button nzType="primary" nzLoading><i nz-icon type="poweroff"></i>加载中</button>
+  <button nz-button nzType="primary" (click)="loadOne()" [nzLoading]="isLoadingOne">点击我</button>
+  <button nz-button nzType="primary" nzLoading nzShape="circle"></button>
+</div>
+<div>
+  <h2>多个按钮组合</h2>
+  <p>按钮组合使用时，推荐使用1个主操作+n个此操作，3个以上操作时把更多操作放到nz-dropdown中组合使用</p>
+  <nz-dropdown>
+    <button nz-button nz-dropdown>点击<i nz-icon type="down"></i></button>
+    <ul nz-menu>
+      <li nz-menu-item>
+        <a>1st 成员</a>
+      </li>
+      <li nz-menu-item>
+        <a>2st 成员</a>
+      </li>
+      <li nz-menu-item>
+        <a>3st 成员</a>
+      </li>
+    </ul>
+  </nz-dropdown>
+</div>
+<div>
+  <h2>按钮组合</h2>
+  <p>可以将多个nz-button放入nz-button-group的容器中</p>
+  <p>通过设置nzSize为large，small分别把按钮组合设为大，小尺寸，不设置默认为中</p>
+</div>
